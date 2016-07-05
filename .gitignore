@@ -1,0 +1,11 @@
+# Ignore everything
+*
+
+# Files to include
+!.gitignore
+!.bash_aliases
+!.mybash
+!.gitignore
+!.tmux.conf
+!.vimperatorrc
+!.vimrc
