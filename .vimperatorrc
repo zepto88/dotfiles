@@ -1,4 +1,4 @@
-"3.12.0 (created: 2016/02/28 22:07:56)
+"3.14.0 (created: 2016/06/07 23:58:16)
 
 highlight Bell border: 0 none; background-color: #222222;
 highlight CmdLine background: #222222; color: #afafaf; font-size: 12pt;
@@ -28,6 +28,7 @@ highlight Tag color: #222222; background: #afafaf;
 highlight Title color: #222222; background: #afafaf; font-weight: bold;
 highlight URL text-decoration: none; color: lightblue; background: inherit;
 highlight WarningMsg color: red; background: #222222;
-source! /home/tobias/.vimperatorrc.local
+source! /home/zepto/.vimperatorrc.local
 
 " vim: set ft=vimperator:
+set gui=nonavigation
