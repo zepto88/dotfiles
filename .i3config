@@ -159,3 +159,4 @@ bar {
 exec setxkbmap -option ctrl:nocaps
 new_window 1pixel
 bindsym $mod+ctrl+l exec i3lock
+bindsym Print exec mate-screenshot
