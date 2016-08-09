@@ -16,3 +16,6 @@ Copy i3config to ~/.config/i3/config<br />
 # USEFULL APPS
 wicd - Graphical wifi configurator<br />
 gtk-chtheme - Graphical gtk theme configurator<br />
+
+# THEME
+Font: Noto Mono
