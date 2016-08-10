@@ -156,7 +156,9 @@ bar {
         tray_output primary
         position top
 }
-exec setxkbmap -option ctrl:nocaps
+exec setxkbmap -layout us -option ctrl:nocaps
 new_window 1pixel
-bindsym $mod+ctrl+l exec i3lock
+bindsym $mod+Control+l exec i3lock
 bindsym Print exec mate-screenshot
+bindsym $mod+F11 exec setxkbmap -layout us -option ctrl:nocaps
+bindsym $mod+F12 exec setxkbmap -layout se -option ctrl:nocaps
