@@ -4,7 +4,7 @@ highlight Bell border: 0 none; background-color: #222222;
 highlight CmdLine background: #222222; color: #afafaf; font-size: 12pt;
 highlight CompDesc color: #c6c6c6; width: 50%; font-size: 12pt;
 highlight CompItem[selected] background: #666666; color: #afafaf; 
-highlight CompResult width: 45%; overflow: hidden;font-size: 12pt; font-family: monospace; font-weight: normal;
+highlight CompResult width: 45%; overflow: hidden;font-size: 12pt; font-family: noto mono; font-weight: normal;
 highlight CompTitle color: #afafaf; background: #222222; font-weight: bold;
 highlight CompTitle>* padding: 0 .5ex;
 highlight ErrorMsg color: #ffffff; background: red; font-weight: bold;
