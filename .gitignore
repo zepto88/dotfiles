@@ -10,5 +10,5 @@
 !.vimperatorrc
 !.vimrc
 !.tigrc
-!.i3status.conf
-!.i3config
+!.i3/
+!.i3/*
