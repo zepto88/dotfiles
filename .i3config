@@ -157,8 +157,9 @@ bar {
         position top
 }
 exec setxkbmap -layout us -option ctrl:nocaps
+exec xautolock -locker "i3lock -e -u -i /home/tobias/Pictures/wallpaper.png"
 new_window 1pixel
-bindsym $mod+Control+l exec i3lock
+bindsym $mod+Control+l exec xautolock -locknow
 bindsym Print exec mate-screenshot
 bindsym $mod+F11 exec setxkbmap -layout us -option ctrl:nocaps
 bindsym $mod+F12 exec setxkbmap -layout se -option ctrl:nocaps
