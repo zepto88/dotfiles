@@ -13,7 +13,7 @@ set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Noto Mono 8
+font pango:Noto Mono 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -157,7 +157,7 @@ bar {
         position top
 }
 exec setxkbmap -layout us -option ctrl:nocaps
-exec xautolock -locker "i3lock -e -u -i /home/tobias/Pictures/wallpaper.png"
+exec xautolock -locker "i3lock -e -u -i ~/Pictures/wallpaper.png"
 exec --no-startup-id xset r rate 300 35
 new_window 1pixel
 bindsym $mod+Control+l exec xautolock -locknow
