@@ -180,7 +180,7 @@ bar {
         }
 }
 exec setxkbmap -layout us -option ctrl:nocaps
-exec xautolock -locker "i3lock -f -r 30"
+exec xautolock -locker "i3lock -u -e -f -r 40"
 exec --no-startup-id xset r rate 300 35
 new_window 1pixel
 bindsym $mod+Control+l exec xautolock -locknow
