@@ -1,10 +1,10 @@
 "3.14.0 (created: 2016/06/07 23:58:16)
 
 highlight Bell border: 0 none; background-color: #161616;
-highlight CmdLine background: #161616; color: #afafaf; font-size: 12pt;
-highlight CompDesc color: #c6c6c6; width: 50%; font-size: 12pt;
+highlight CmdLine background: #161616; color: #afafaf; font-size: 10pt;
+highlight CompDesc color: #c6c6c6; width: 50%; font-size: 10pt;
 highlight CompItem[selected] background: #666666; color: #afafaf; 
-highlight CompResult width: 45%; overflow: hidden;font-size: 12pt; font-family: noto mono; font-weight: normal;
+highlight CompResult width: 45%; overflow: hidden;font-size: 10pt; font-family: noto mono; font-weight: normal;
 highlight CompTitle color: #afafaf; background: #161616; font-weight: bold;
 highlight CompTitle>* padding: 0 .5ex;
 highlight ErrorMsg color: #ffffff; background: red; font-weight: bold;
@@ -22,7 +22,7 @@ highlight NonText color: lightblue; min-height: 16px; padding-left: 2px;
 highlight Normal color: #afafaf; background: #161616;
 highlight Number color: tan; background: #161616
 highlight Question color: #ffffff; background: #161616; font-weight: bold;
-highlight StatusLine color: #afafaf; background: #161616; "font-size: 12pt;
+highlight StatusLine color: #afafaf; background: #161616; "font-size: 10pt;
 highlight String color: #161616; background: #afafaf;
 highlight Tag color: #161616; background: #afafaf;
 highlight Title color: #161616; background: #afafaf; font-weight: bold;
