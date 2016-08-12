@@ -11,12 +11,13 @@ git checkout -t origin/master<br />
 I manually add .mybash to .bashrc<br />
 Remove PS1 from .bashrc<br />
 
-Copy i3config to ~/.config/i3/config<br />
-
 # USEFULL APPS
 wicd - Graphical wifi configurator<br />
 gtk-chtheme - Graphical gtk theme configurator<br />
 i3lock-blur - https://github.com/karulont/i3lock-blur - i3locker fork with blurred background<br />
 
 # THEME
-Font: Noto Mono
+Font: Noto Mono<br />
+Font: FontAwesome<br />
+ - https://github.com/FortAwesome/Font-Awesome<br />
+ - http://fontawesome.io/cheatsheet/<br />
