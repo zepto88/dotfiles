@@ -172,7 +172,6 @@ client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color     
 # finds out, if available)
 bar {
         status_command i3status -c ~/.i3/i3status.conf
-        tray_output primary
         position top
         colors {
             background $bg-color
@@ -184,9 +183,11 @@ bar {
         }
         strip_workspace_numbers yes
 }
+
 exec setxkbmap -layout us -option ctrl:nocaps
 exec xautolock -locker "i3lock -u -e -f -r 40"
 exec --no-startup-id xset r rate 300 35
+exec --no-startup-id nm-applet
 new_window 1pixel
 bindsym $mod+Control+l exec xautolock -locknow
 bindsym Print exec mate-screenshot
