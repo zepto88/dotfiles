@@ -12,11 +12,15 @@ I manually add .mybash to .bashrc<br />
 Remove PS1 from .bashrc<br />
 
 # USEFULL APPS
-wicd - Graphical wifi configurator<br />
-gtk-chtheme - Graphical gtk theme configurator<br />
+lxappearence - Graphical gtk theme configurator<br />
+i3blocks - Alternative i3status<br />
+xautolock - Lock screen on timeout<br />
+xbrightness - Change brightness<br />
+pavucontorl - Volumecontroller<br />
 i3lock-blur - https://github.com/karulont/i3lock-blur - i3locker fork with blurred background<br />
 
-# THEME
+
+# THEMEING
 Font: Noto Mono<br />
 Font: FontAwesome<br />
  - https://github.com/FortAwesome/Font-Awesome<br />
