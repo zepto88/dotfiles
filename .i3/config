@@ -190,6 +190,7 @@ exec setxkbmap -layout us -option ctrl:nocaps
 exec xautolock -locker "i3lock -u -e -f -r 40"
 exec --no-startup-id xset r rate 300 35
 exec --no-startup-id nm-applet
+exec --no-startup-id mate-power-manager
 
 new_window 1pixel
 
