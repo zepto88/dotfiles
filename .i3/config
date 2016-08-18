@@ -186,6 +186,7 @@ bar {
         strip_workspace_numbers yes
 }
 
+exec feh --bg-scale ~/Pictures/wallpaper.jpg
 exec setxkbmap -layout us -option ctrl:nocaps
 exec_always xautolock -locker "~/.i3/lock"
 exec --no-startup-id xset r rate 300 35
