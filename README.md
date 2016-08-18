@@ -11,17 +11,24 @@ git checkout -t origin/master<br />
 I manually add .mybash to .bashrc<br />
 Remove PS1 from .bashrc<br />
 
-# USEFULL APPS
-lxappearence - Graphical gtk theme configurator<br />
-i3blocks - Alternative i3status<br />
-xautolock - Lock screen on timeout<br />
-xbrightness - Change brightness<br />
-pavucontorl - Volumecontroller<br />
-i3lock-blur - https://github.com/karulont/i3lock-blur - i3locker fork with blurred background<br />
+My locker script is copied with a slight modification from https://github.com/guimeira/i3lock-fancy-multimonitor<br />
 
+# MY DEPS
+sudo apt install xorg build-essential lightdm-gtk-greeter i3 i3blocks lightdm git tig vim arandr mate-terminal fonts-noto-mono firefox compton apt-file software-properties-common tmux lightdm-gtk-greeter-settings lxappearance pavucontrol xautolock xbacklight scrot imagemagick gimp feh htop pkg-config automake pkgconf flashplugin-installer<br />
 
 # THEMEING
 Font: Noto Mono<br />
 Font: FontAwesome<br />
  - https://github.com/FortAwesome/Font-Awesome<br />
  - http://fontawesome.io/cheatsheet/<br />
+i3lock-blur<br /> 
+ - https://github.com/karulont/i3lock-blur<br />
+Ambience GTK Theme:<br />
+ - sudo add-apt-repository ppa:ravefinity-project/ppa<br />
+Numix Icons:<br />
+ - Numix: sudo add-apt-repository ppa:numix/ppa<br />
+
+
+# USEFULL CMDS
+Update font cache: sudo fc-cache -f -v<br />
+ 
