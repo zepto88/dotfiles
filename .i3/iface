@@ -19,7 +19,9 @@
 
 # Use the provided interface, otherwise the device used for the default route.
 if [[ -n $BLOCK_INSTANCE ]]; then
-  IF=$(nmcli dev status | awk -F' ' '/'${BLOCK_INSTANCE}'/ {print $1}')
+  iface=$(echo $BLOCK_INSTANCE | awk -F'-' '{print $1}')
+  nbr=$(echo $BLOCK_INSTANCE | awk -F'-' '{print $2}')
+  IF=$(nmcli dev status | awk -F' ' '/'${iface}'/ {print $1}' | sed -n ''${nbr}p'')
 else
   IF=$(ip route | awk '/^default/ { print $5 ; exit }')
 fi
