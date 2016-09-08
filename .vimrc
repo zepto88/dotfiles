@@ -6,7 +6,6 @@ set runtimepath=~/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vi
 set shiftwidth=4
 set expandtab
 set tabstop=4
-set relativenumber
 set scrolloff=5
 set guioptions-=r
 set guioptions-=L
