@@ -1,5 +1,5 @@
 map <F2> :NERDTreeToggle<CR>
-colorscheme desert 
+colorscheme pablo 
 set ignorecase
 set ruler
 set runtimepath=~/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
