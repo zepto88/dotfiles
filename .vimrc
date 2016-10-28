@@ -1,4 +1,5 @@
 map <F2> :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen=1
 colorscheme pablo 
 set ignorecase
 set ruler
