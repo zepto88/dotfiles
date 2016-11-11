@@ -30,7 +30,7 @@ font pango:Terminus, FontAwesome 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec mate-terminal 
+bindsym $mod+Return exec mate-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -97,7 +97,7 @@ set $w2 "2:"
 set $w10 "10:"
 
 # switch to workspace
-bindsym $mod+1 workspace $w1 
+bindsym $mod+1 workspace $w1
 bindsym $mod+2 workspace $w2
 bindsym $mod+3 workspace 3:III
 bindsym $mod+4 workspace 4:IV
@@ -192,6 +192,7 @@ exec --no-startup-id xset r rate 300 35
 exec --no-startup-id nm-applet
 exec --no-startup-id mate-power-manager
 exec --no-startup-id redshift-gtk
+exec --no-startup-id xcape -e 'Control_L=Escape'
 
 new_window 1pixel
 
