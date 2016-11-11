@@ -27,6 +27,8 @@ Ambience GTK Theme:<br />
  - sudo add-apt-repository ppa:ravefinity-project/ppa<br />
 Numix Icons:<br />
  - Numix: sudo add-apt-repository ppa:numix/ppa<br />
+Xcape <br />
+ - xcape - https://github.com/alols/xcape.git
 
 
 # USEFULL CMDS
