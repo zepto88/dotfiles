@@ -19,4 +19,4 @@ syntax on
 set list
 set listchars=trail:.
 hi ExtraWhitespace ctermbg=lightblue guibg=lightblue ctermfg=black
-match ExtraWhitespace /\s\+$/
+2match ExtraWhitespace /\s\+$/
