@@ -188,7 +188,7 @@ bar {
 
 exec setxkbmap -layout us -option ctrl:nocaps
 exec xautolock -locker "~/.i3/lock"
-exec --no-startup-id xset r rate 300 35
+exec --no-startup-id xset r rate 200 50
 exec --no-startup-id nm-applet
 exec --no-startup-id mate-power-manager
 exec --no-startup-id redshift-gtk
