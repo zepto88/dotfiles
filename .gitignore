@@ -4,7 +4,7 @@
 # Files to include
 !.gitignore
 !.bash_aliases
-!.mybash
+!.zshrc
 !.gitignore
 !.tmux.conf
 !.vimperatorrc
