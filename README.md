@@ -6,10 +6,7 @@ git init<br />
 git remote add origin http://github.com/zepto88/dotfiles.git<br />
 git fetch<br />
 git checkout -t origin/master<br />
-
-# NOTE
-I manually add .mybash to .bashrc<br />
-Remove PS1 from .bashrc<br />
+wget https://github.com/tpope/vim-pathogen/raw/master/autoload/pathogen.vim ~/.vim/autoload/
 
 My locker script is copied with a slight modification from https://github.com/guimeira/i3lock-fancy-multimonitor<br />
 
