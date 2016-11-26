@@ -9,6 +9,9 @@
 !.tmux.conf
 !.vimperatorrc
 !.vimrc
+!.vim/
+!.vim/bundle/
+!.vim/bundle/*
 !.tigrc
 !.i3/
 !.i3/*
