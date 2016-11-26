@@ -1,3 +1,6 @@
+" pathogen
+call pathogen#infect()
+call pathogen#helptags()
 " NERDTREE
 map <F2> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
