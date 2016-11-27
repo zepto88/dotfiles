@@ -6,7 +6,8 @@ git init<br />
 git remote add origin http://github.com/zepto88/dotfiles.git<br />
 git fetch<br />
 git checkout -t origin/master<br />
-wget https://github.com/tpope/vim-pathogen/raw/master/autoload/pathogen.vim ~/.vim/autoload/
+wget https://github.com/tpope/vim-pathogen/raw/master/autoload/pathogen.vim ~/.vim/autoload/<br />
+git submodule update --init --recursive
 
 My locker script is copied with a slight modification from https://github.com/guimeira/i3lock-fancy-multimonitor<br />
 
@@ -27,8 +28,3 @@ Numix Icons:<br />
  - Numix: sudo add-apt-repository ppa:numix/ppa<br />
 Xcape <br />
  - xcape - https://github.com/alols/xcape.git
-
-
-# USEFULL CMDS
-Update font cache: sudo fc-cache -f -v<br />
- 
