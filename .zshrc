@@ -54,7 +54,7 @@ ZSH_THEME="bira"
 #plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-
+source /usr/share/powerline/bindings/zsh/powerline.zsh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
