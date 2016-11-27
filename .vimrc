@@ -46,6 +46,8 @@ hi Visual term=reverse cterm=reverse
 " mappings
 nnoremap <C-n> gt
 nnoremap <C-p> gT
+nnoremap n nzz
+nnoremap N Nzz
 
 " commands
 command! MakeTags !ctags -R .
