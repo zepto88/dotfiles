@@ -11,10 +11,11 @@ wget https://github.com/tpope/vim-pathogen/raw/master/autoload/pathogen.vim ~/.v
 My locker script is copied with a slight modification from https://github.com/guimeira/i3lock-fancy-multimonitor<br />
 
 # MY DEPS
-sudo apt install xorg build-essential lightdm-gtk-greeter i3 i3blocks lightdm git tig vim arandr mate-terminal fonts-noto-mono firefox compton apt-file software-properties-common tmux lightdm-gtk-greeter-settings lxappearance pavucontrol xautolock xbacklight scrot imagemagick gimp feh htop pkg-config automake pkgconf flashplugin-installer<br />
+sudo apt install xorg build-essential lightdm-gtk-greeter i3 i3blocks lightdm git tig vim arandr mate-terminal fonts-noto-mono firefox compton apt-file software-properties-common tmux lightdm-gtk-greeter-settings lxappearance pavucontrol xautolock xbacklight scrot imagemagick gimp feh htop pkg-config automake pkgconf flashplugin-installer powerline <br />
 
 # THEMEING
-Font: Noto Mono<br />
+Font: Fonts for powerline<br />
+ - https://github.com/powerline/fonts<br />
 Font: FontAwesome<br />
  - https://github.com/FortAwesome/Font-Awesome<br />
  - http://fontawesome.io/cheatsheet/<br />
