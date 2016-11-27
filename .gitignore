@@ -3,7 +3,6 @@
 
 # Files to include
 !.gitignore
-!.bash_aliases
 !.zshrc
 !.gitignore
 !.tmux.conf
