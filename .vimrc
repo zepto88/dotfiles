@@ -22,7 +22,6 @@ set t_Co=256
 set nocompatible
 set list
 set listchars=trail:.
-colorscheme pablo
 syntax on
 filetype plugin on
 
@@ -52,3 +51,4 @@ nnoremap N Nzz
 " commands
 command! MakeTags !ctags -R .
 
+colorscheme pablo
