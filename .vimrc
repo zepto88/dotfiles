@@ -51,4 +51,4 @@ nnoremap N Nzz
 " commands
 command! MakeTags !ctags -R .
 
-colorscheme pablo
+colorscheme default
