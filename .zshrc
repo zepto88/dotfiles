@@ -84,3 +84,7 @@ source /usr/share/powerline/bindings/zsh/powerline.zsh
  alias zshconfig="vim ~/.zshrc"
  alias ohmyzsh="vim ~/.oh-my-zsh/oh-my-zsh.sh"
  alias tmux="tmux -2"
+
+# move forward and back like vim
+ bindkey "^w" forward-word
+ bindkey "^b" backward-word
