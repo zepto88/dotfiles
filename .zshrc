@@ -88,3 +88,5 @@ source /usr/share/powerline/bindings/zsh/powerline.zsh
 # move forward and back like vim
  bindkey "^w" forward-word
  bindkey "^b" backward-word
+
+ unsetopt share_history
