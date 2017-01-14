@@ -173,7 +173,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color     
 bar {
         #status_command i3status -c ~/.i3/i3status.conf
         status_command i3blocks -c ~/.i3/i3blocks.conf
-        separator_symbol "/"
+        separator_symbol "|"
         position top
         colors {
             background $bg-color
