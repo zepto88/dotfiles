@@ -20,8 +20,6 @@ set wildmenu
 set hlsearch
 set t_Co=256
 set nocompatible
-set list
-set listchars=trail:.
 syntax on
 filetype plugin on
 
