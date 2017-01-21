@@ -9,6 +9,8 @@
 !.vimperatorrc
 !.vimrc
 !.vim/
+!.vim/autoload
+!.vim/autoload/vim-pathogen
 !.vim/bundle/
 !.vim/bundle/*
 !.tigrc

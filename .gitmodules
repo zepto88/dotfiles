@@ -10,3 +10,6 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule ".vim/autoload/vim-pathogen"]
+	path = .vim/autoload/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
