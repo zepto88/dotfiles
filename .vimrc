@@ -35,11 +35,13 @@ set noshowmode
 
 " Color settings
 hi clear
+colorscheme default
 hi Bang ctermbg=red guibg=red
 match Bang /\%>79v.*\%<81v/
 hi ExtraWhitespace ctermbg=lightblue guibg=lightblue ctermfg=black
 2match ExtraWhitespace /\s\+$/
-hi Visual term=reverse cterm=reverse
+hi Visual cterm=NONE ctermfg=black ctermbg=white
+hi Search cterm=NONE ctermfg=black ctermbg=yellow
 
 " mappings
 nnoremap <C-n> gt
@@ -50,4 +52,3 @@ nnoremap N Nzz
 " commands
 command! MakeTags !ctags -R .
 
-colorscheme default
