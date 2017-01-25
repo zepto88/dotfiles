@@ -43,6 +43,12 @@ hi ExtraWhitespace ctermbg=lightblue guibg=lightblue ctermfg=black
 hi Visual cterm=NONE ctermfg=black ctermbg=white
 hi Search cterm=NONE ctermfg=black ctermbg=yellow
 
+" vimdiff colors
+hi DiffAdd cterm=none ctermfg=NONE ctermbg=34
+hi DiffChange cterm=none ctermfg=NONE ctermbg=8
+hi DiffDelete cterm=none ctermfg=NONE ctermbg=97
+hi DiffText cterm=none ctermfg=NONE ctermbg=166
+
 " mappings
 nnoremap <C-n> gt
 nnoremap <C-p> gT
