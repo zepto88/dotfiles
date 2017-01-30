@@ -36,7 +36,7 @@ set noshowmode
 " Color settings
 hi clear
 colorscheme default
-hi Bang ctermbg=red guibg=red
+hi Bang ctermfg=black ctermbg=red guibg=red
 match Bang /\%>79v.*\%<81v/
 hi ExtraWhitespace ctermbg=lightblue guibg=lightblue ctermfg=black
 2match ExtraWhitespace /\s\+$/
