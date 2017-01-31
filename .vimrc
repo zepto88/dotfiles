@@ -44,10 +44,11 @@ hi Visual cterm=NONE ctermfg=black ctermbg=white
 hi Search cterm=NONE ctermfg=black ctermbg=yellow
 
 " vimdiff colors
-hi DiffAdd cterm=none ctermfg=NONE ctermbg=34
+hi DiffAdd cterm=none ctermfg=NONE ctermbg=23
 hi DiffChange cterm=none ctermfg=NONE ctermbg=8
-hi DiffDelete cterm=none ctermfg=NONE ctermbg=97
-hi DiffText cterm=none ctermfg=NONE ctermbg=166
+hi DiffDelete cterm=none ctermfg=NONE ctermbg=95
+hi DiffText cterm=none ctermfg=0 ctermbg=166
+hi Folded   cterm=none ctermfg=15 ctermbg=8
 
 " mappings
 nnoremap <C-n> gt
