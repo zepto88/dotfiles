@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bira"
+ZSH_THEME="simple"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -54,7 +54,7 @@ ZSH_THEME="bira"
 #plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source /usr/share/powerline/bindings/zsh/powerline.zsh
+source /usr/local/lib/python3.5/dist-packages/powerline/bindings/zsh/powerline.zsh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
