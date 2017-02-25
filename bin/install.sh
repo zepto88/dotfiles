@@ -17,6 +17,8 @@ apt update
 yes | apt install ambiance-flat-colors numix-icon-theme oracle-java8-installer
 
 #GIT
+user=$(who am i | awk '{print $1}')
+su $user
 mkdir ~/repos
 cd ~/repos
 
