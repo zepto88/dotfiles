@@ -15,21 +15,19 @@ ubuntu : xorg build-essential lightdm-gtk-greeter i3 i3blocks lightdm git tig vi
 python3: powerline
 
 # Some nice repos
-Font: Fonts for powerline<br />
- - https://github.com/powerline/fonts<br />
+Fonts for powerilne - https://github.com/powerline/fonts.git
 
-Font: FontAwesome<br />
- - https://github.com/FortAwesome/Font-Awesome<br />
- - http://fontawesome.io/cheatsheet/<br />
+FontAwesome - https://github.com/FortAwesome/Font-Awesome.git
 
-i3lock-blur<br /> 
- - https://github.com/karulont/i3lock-blur<br />
+i3lock blur - https://github.com/karulont/i3lock-blur.git
 
-Ambience GTK Theme:<br />
- - sudo add-apt-repository ppa:ravefinity-project/ppa<br />
+Xcape - https://github.com/alols/xcape.git
 
-Numix Icons:<br />
- - Numix: sudo add-apt-repository ppa:numix/ppa<br />
+tmux - https://github.com/tmux/tmux.git
 
-Xcape <br />
- - xcape - https://github.com/alols/xcape.git
+# PPAs
+Ambience GTK Theme - ppa:ravefinity-project/ppa
+
+Numix Icons - ppa:numix/ppa
+
+Oracje Java - ppa:webupd8team/java
