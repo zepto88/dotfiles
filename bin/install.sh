@@ -1,12 +1,27 @@
 #!/bin/bash
-apt update && yes | apt install $(awk -F: '/ubuntu/ {print $2}')
 
-yes | add-apt-repository ppa:ravefinity-project/ppa || (echo "Could not add ravefinity ppa"; exit 1)
+#APT
+apt update 
+yes | apt install $(awk -F: '/ubuntu/ {print $2}')
 
-yes | add-apt-repository ppa:numix/ppa || (echo "Could not add numix ppa"; exit 1)
+#PYTHON
+pip3 install powerline-status
+
+#GIT
+mkdir ~/repos
+cd ~/repos
+
+for git in $(awk -F- '/.*\.git/ && !/dotfiles/ {print $2}' README.md)
+do
+    git clone $git
+done
+
+#PPA
+for ppa in $(awk -F- '/ppa:/ {print $2}' README.md)
+do
+    yes | add-apt-repository $ppa
+done
 
 apt update
+yes | apt install ambiance-flat-colors numix-icon-theme oracle-java8-installer
 
-yes | apt install ambiance-flat-colors numix-icon-theme
-
-sudo pip3 install powerline
