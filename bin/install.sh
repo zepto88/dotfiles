@@ -2,7 +2,7 @@
 
 #APT
 apt update 
-yes | apt install $(awk -F: '/ubuntu/ {print $2}' ~/README.md)
+apt install -y $(awk -F: '/ubuntu/ {print $2}' ~/README.md) debconf-utils
 
 #PYTHON
 pip3 install powerline-status
@@ -10,11 +10,12 @@ pip3 install powerline-status
 #PPA
 for ppa in $(awk -F' - ' '/ppa:/ {print $2}' ~/README.md)
 do
-    yes | add-apt-repository $ppa
+    add-apt-repository -y $ppa
 done
 
 apt update
-yes | apt install ambiance-flat-colors numix-icon-theme oracle-java8-installer
+echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
+apt install -y ambiance-flat-colors numix-icon-theme oracle-java8-installer
 
 #GIT
 user=$(who am i | awk '{print $1}')
