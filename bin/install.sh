@@ -8,7 +8,7 @@ yes | apt install $(awk -F: '/ubuntu/ {print $2}' ~/README.md)
 pip3 install powerline-status
 
 #PPA
-for ppa in $(awk -F- '/ppa:/ {print $2}' ~/README.md)
+for ppa in $(awk -F' - ' '/ppa:/ {print $2}' ~/README.md)
 do
     yes | add-apt-repository $ppa
 done
@@ -22,7 +22,7 @@ su $user
 mkdir ~/repos
 cd ~/repos
 
-for git in $(awk -F- '/.*\.git/ && !/dotfiles/ {print $2}' ~/README.md)
+for git in $(awk -F' - ' '/.*\.git/ && !/dotfiles/ {print $2}' ~/README.md)
 do
     git clone $git
 done
