@@ -19,13 +19,13 @@ apt install -y ambiance-flat-colors numix-icon-theme oracle-java8-installer
 
 #GIT
 user=$(who am i | awk '{print $1}')
-su $user
-mkdir ~/repos
+test -d ~/repos || sudo -u $user mkdir ~/repos
 cd ~/repos
 
-for git in $(awk -F' - ' '/.*\.git/ && !/dotfiles/ {print $2}' ~/README.md)
+for repo in $(awk -F' - ' '/.*\.git/ && !/dotfiles/ {print $2}' ~/README.md)
 do
-    git clone $git
+    sudo -u $user git clone $repo
 done
 
-chsh -s $(which zsh) $user
+#SHELL
+usermod -s $(which zsh) $user
