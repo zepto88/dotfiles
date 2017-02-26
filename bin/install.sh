@@ -28,3 +28,4 @@ do
     git clone $git
 done
 
+chsh -s $(which zsh) $user
