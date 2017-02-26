@@ -15,7 +15,7 @@ ubuntu : xorg build-essential lightdm-gtk-greeter i3 i3blocks lightdm git tig vi
 python3: powerline
 
 # Some nice repos
-Fonts for powerilne - https://github.com/powerline/fonts.git
+Fonts for powerline - https://github.com/powerline/fonts.git
 
 FontAwesome - https://github.com/FortAwesome/Font-Awesome.git
 
