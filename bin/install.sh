@@ -29,3 +29,11 @@ done
 
 #SHELL
 usermod -s $(which zsh) $user
+
+#FANCY
+cd fonts
+./install.sh
+cd -
+cp Font-Awesome/fonts/*.ttf ~/.local/share/fonts/
+
+
