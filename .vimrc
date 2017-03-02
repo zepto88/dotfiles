@@ -57,6 +57,7 @@ nnoremap n nzz
 nnoremap N Nzz
 nnoremap <F8> :set number!<CR>:set relativenumber!<CR>
 nnoremap <Enter> @@
+nnoremap <leader>t :tabnew<space>
 
 " commands
 command! MakeTags !ctags -R .
