@@ -8,11 +8,9 @@
 !.tmux.conf
 !.vimperatorrc
 !.vimrc
-!.vim/
-!.vim/autoload
-!.vim/autoload/vim-pathogen
-!.vim/bundle/
-!.vim/bundle/*
+!.vim
+!.vim/bundle
+!.vim/bundle/vundle.vim
 !.tigrc
 !.i3/
 !.i3/*

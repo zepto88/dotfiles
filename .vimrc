@@ -1,7 +1,12 @@
-" pathogen
-runtime autoload/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
+" Vundle
+set rtp+=~/.vim/bundle/vundle.vim
+call vundle#begin()
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+call vundle#end()
 
 " NERDTREE
 map <F2> :NERDTreeToggle<CR>
