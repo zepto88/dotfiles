@@ -30,4 +30,4 @@ Ambience GTK Theme - ppa:ravefinity-project/ppa
 
 Numix Icons - ppa:numix/ppa
 
-Oracje Java - ppa:webupd8team/java
+Oracle Java - ppa:webupd8team/java
