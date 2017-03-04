@@ -199,6 +199,7 @@ bindsym $mod+Control+l exec xautolock -locknow
 bindsym Print exec mate-screenshot
 bindsym $mod+F11 exec setxkbmap -layout us -option ctrl:nocaps
 bindsym $mod+F12 exec setxkbmap -layout se -option ctrl:nocaps
+bindsym $mod+F8 exec  ~/.screenlayout/secondary.sh
 
 bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ '-5%'
 bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ '+5%'
@@ -206,7 +207,7 @@ bindsym XF86AudioMute exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ 0
 bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10%
 bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 5%
 
-exec_always ~/.screenlayout/tobias.sh
+exec_always ~/.screenlayout/primary.sh
 exec_always feh --bg-scale ~/Pictures/wallpaper
 exec_always compton
 exec_always powerline-daemon
