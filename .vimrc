@@ -57,6 +57,10 @@ hi DiffText cterm=none ctermfg=0 ctermbg=166
 hi Folded   cterm=none ctermfg=15 ctermbg=8
 
 " mappings
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 nnoremap <C-n> gt
 nnoremap <C-p> gT
 nnoremap n nzz
