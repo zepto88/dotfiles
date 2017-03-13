@@ -81,6 +81,7 @@ source /usr/local/lib/python3.5/dist-packages/powerline/bindings/zsh/powerline.z
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+ source ~/.zsh_aliases
  alias zshconfig="vim ~/.zshrc"
  alias ohmyzsh="vim ~/.oh-my-zsh/oh-my-zsh.sh"
  alias tmux="tmux -2"
