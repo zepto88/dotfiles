@@ -197,7 +197,7 @@ exec --no-startup-id powerline-daemon
 new_window 1pixel
 
 bindsym $mod+Control+l exec xautolock -locknow
-bindsym Print exec mate-screenshot
+bindsym Print exec screengrab
 bindsym $mod+F11 exec setxkbmap -layout us -option ctrl:nocaps
 bindsym $mod+F12 exec setxkbmap -layout se -option ctrl:nocaps
 bindsym $mod+F8 exec  ~/.screenlayout/secondary.sh
