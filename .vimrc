@@ -55,8 +55,13 @@ hi DiffChange cterm=none ctermfg=NONE ctermbg=8
 hi DiffDelete cterm=none ctermfg=NONE ctermbg=95
 hi DiffText cterm=none ctermfg=0 ctermbg=166
 hi Folded   cterm=none ctermfg=15 ctermbg=8
+hi CursorColumn ctermbg=8
 
 " mappings
+noremap <F8> :set number!<CR>:set relativenumber!<CR>
+noremap <F4> :set cursorcolumn!<CR>
+noremap! <C-BS> <C-w>
+noremap! <C-h> <C-w>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -65,7 +70,6 @@ nnoremap <C-n> gt
 nnoremap <C-p> gT
 nnoremap n nzz
 nnoremap N Nzz
-nnoremap <F8> :set number!<CR>:set relativenumber!<CR>
 nnoremap <Enter> @@
 nnoremap <leader>t :tabnew<space>
 nnoremap <leader>f :find<space>
