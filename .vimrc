@@ -74,6 +74,7 @@ nnoremap <Enter> @@
 nnoremap <leader>t :tabnew<space>
 nnoremap <leader>f :find<space>
 nnoremap <leader>b :buffers<cr>:b<space>
+vnoremap // y/<C-R>"<CR>
 
 " commands
 command! MakeTags !ctags -R .
