@@ -46,8 +46,8 @@ hi Bang ctermfg=black ctermbg=red guibg=red
 match Bang /\%>79v.*\%<81v/
 hi ExtraWhitespace ctermbg=lightblue guibg=lightblue ctermfg=black
 2match ExtraWhitespace /\s\+$/
-hi Visual cterm=NONE ctermfg=black ctermbg=white
-hi Search cterm=NONE ctermfg=black ctermbg=yellow
+hi Visual cterm=NONE ctermfg=black ctermbg=172
+hi Search cterm=NONE ctermfg=black ctermbg=green
 
 " vimdiff colors
 hi DiffAdd cterm=none ctermfg=NONE ctermbg=23
