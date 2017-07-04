@@ -86,6 +86,13 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
+# force floating
+for_window [class="[.]*"] floating enable 
+
+#force fullscreen
+for_window [class="URxvt"] floating disable
+for_window [window_role="browser"] floating disable
+
 # focus the parent container
 bindsym $mod+a focus parent
 
