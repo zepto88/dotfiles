@@ -162,7 +162,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 set $bg-color               #161616
-set $focused-color          #2f2f2f
+set $focused-color          #0087AF
 set $inactive-bg-color      #161616
 set $text-color             #f3f4f5
 set $inactive-text-color    #67637d
@@ -203,8 +203,7 @@ exec --no-startup-id compton -b --backend xrender --vsync opengl
 exec --no-startup-id powerline-daemon
 
 new_window 1pixel
-new_window pixel 3
-hide_edge_borders both
+new_window pixel 2
 
 bindsym $mod+Control+l exec xautolock -locknow
 bindsym Print exec screengrab
