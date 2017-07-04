@@ -91,7 +91,7 @@ for_window [class="[.]*"] floating enable
 
 #force fullscreen
 for_window [class="URxvt"] floating disable
-for_window [class="spotify"] floating disable
+for_window [class="Spotify"] floating disable
 for_window [window_role="browser"] floating disable
 
 # focus the parent container
