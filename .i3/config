@@ -195,6 +195,8 @@ exec --no-startup-id compton -b --backend xrender --vsync opengl
 exec --no-startup-id powerline-daemon
 
 new_window 1pixel
+new_window pixel 3
+hide_edge_borders both
 
 bindsym $mod+Control+l exec xautolock -locknow
 bindsym Print exec screengrab
