@@ -194,11 +194,9 @@ bar {
         strip_workspace_numbers yes
 }
 
-exec setxkbmap -layout us -option ctrl:nocaps
 exec xautolock -locker "~/.i3/lock"
 exec --no-startup-id nm-applet
 exec --no-startup-id mate-power-manager
-exec --no-startup-id xcape -e 'Control_L=Escape'
 exec --no-startup-id compton -b --backend xrender --vsync opengl
 exec --no-startup-id powerline-daemon
 
@@ -208,7 +206,8 @@ new_window pixel 2
 bindsym $mod+Control+l exec xautolock -locknow
 bindsym Print exec screengrab
 bindsym $mod+F11 exec setxkbmap -layout us -option ctrl:nocaps
-bindsym $mod+F12 exec setxkbmap -layout se -option ctrl:nocaps
+bindsym $mod+F12 exec setxkbmap -layout sv -option ctrl:nocaps
+bindsym $mod+F7 exec  ~/.screenlayout/primary.sh
 bindsym $mod+F8 exec  ~/.screenlayout/secondary.sh
 
 bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ '-5%'
@@ -217,6 +216,7 @@ bindsym XF86AudioMute exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ 0
 bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10%
 bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 5%
 
+exec_always keyboard-settings.sh
 exec_always xset r rate 225 50
 exec_always ~/.screenlayout/primary.sh
 exec_always feh --bg-scale ~/Pictures/wallpaper
