@@ -67,3 +67,4 @@ map -count -modes=n <C-t> <count>:tabnew<Return>o
 set cdpath=''
 
 " vim: set ft=pentadactyl:
+map -builtin <leader>r :open reddit/r/
