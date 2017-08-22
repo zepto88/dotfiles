@@ -197,7 +197,7 @@ bar {
 exec xautolock -locker "~/.i3/lock"
 exec --no-startup-id nm-applet
 exec --no-startup-id mate-power-manager
-exec --no-startup-id compton -b --backend xrender --vsync opengl
+exec --no-startup-id compton -b --backend glx --vsync opengl-swc
 exec --no-startup-id powerline-daemon
 
 new_window 1pixel
