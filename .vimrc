@@ -6,6 +6,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/syntastic'
+Plugin 'honza/vim-snippets'
+Plugin 'tpope/vim-commentary'
+Plugin 'chiel92/vim-autoformat'
 
 call vundle#end()
 
@@ -75,7 +79,7 @@ nnoremap <leader>t :tabnew<space>
 nnoremap <leader>f :find<space>
 nnoremap <leader>b :buffers<cr>:b<space>
 vnoremap // y/<C-R>"<CR>
+noremap <leader>F :Autoformat<CR>
 
 " commands
 command! MakeTags !ctags -R .
-
