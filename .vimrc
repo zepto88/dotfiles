@@ -10,6 +10,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-commentary'
 Plugin 'chiel92/vim-autoformat'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()
 
