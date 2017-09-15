@@ -4,6 +4,8 @@
 # Files to include
 !.gitignore
 !.zshrc
+!.zsh/
+!.zsh/*
 !.gitignore
 !.tmux.conf
 !.vimperatorrc
