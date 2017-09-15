@@ -198,7 +198,7 @@ exec xautolock -locker "~/.i3/lock"
 exec --no-startup-id nm-applet
 exec --no-startup-id mate-power-manager
 exec --no-startup-id compton -b --backend glx --vsync opengl-swc
-exec --no-startup-id powerline-daemon
+exec --no-startup-id volumeicon
 
 new_window 1pixel
 new_window pixel 2
