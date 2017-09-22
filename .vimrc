@@ -11,12 +11,9 @@ Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-commentary'
 Plugin 'chiel92/vim-autoformat'
 Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
-
-" NERDTREE
-map <F2> :NERDTreeToggle<CR>
-let NERDTreeQuitOnOpen=1
 
 " Settings
 set ignorecase
@@ -34,15 +31,6 @@ set t_Co=256
 set nocompatible
 syntax on
 filetype plugin on
-
-" airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_tabs = 0
-let g:airline_powerline_fonts=1
-let g:airline_theme='badwolf'
-set laststatus=2
-set ttimeoutlen=0
-set noshowmode
 
 " Color settings
 hi clear
@@ -62,6 +50,35 @@ hi DiffText cterm=none ctermfg=0 ctermbg=166
 hi Folded   cterm=none ctermfg=15 ctermbg=8
 hi CursorColumn ctermbg=8
 
+" NERDTREE
+map <F2> :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen=1
+
+
+" airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_tabs = 0
+let g:airline_powerline_fonts=1
+let g:airline_theme='badwolf'
+set laststatus=2
+set ttimeoutlen=0
+set noshowmode
+
+" syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_enable_highlighting=0
+let g:syntastic_enable_signs=1
+highlight SyntasticErrorLine ctermbg=95
+highlight SyntasticWarningLine ctermbg=95
+
+nnoremap ge :lnext<cr>
+nnoremap gE :lprev<cr>
+
+" CtrlP
+let g:ctrlp_map = '<leader>p'
+
 " mappings
 noremap <F8> :set number!<CR>:set relativenumber!<CR>
 noremap <F4> :set cursorcolumn!<CR>
@@ -71,8 +88,8 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-nnoremap <C-n> gt
-nnoremap <C-p> gT
+nnoremap <C-n> :bn<cr>
+nnoremap <C-p> :bp<cr>
 nnoremap n nzz
 nnoremap N Nzz
 nnoremap <Enter> @@
