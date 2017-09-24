@@ -194,7 +194,6 @@ bar {
         strip_workspace_numbers yes
 }
 
-exec xautolock -locker "~/.i3/lock"
 exec --no-startup-id nm-applet
 exec --no-startup-id mate-power-manager
 exec --no-startup-id compton -b --backend glx --vsync opengl-swc
@@ -216,6 +215,7 @@ bindsym XF86AudioMute exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ 0
 bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10%
 bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 5%
 
+exec_always ~/.i3/i3autolock.sh
 exec_always keyboard-settings.sh
 exec_always xset r rate 225 50
 exec_always ~/.screenlayout/primary.sh
