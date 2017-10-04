@@ -29,7 +29,7 @@ ZSH_THEME="mh"
  DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
- ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -90,3 +90,4 @@ source $ZSH/oh-my-zsh.sh
  bindkey "^b" backward-word
 
  unsetopt share_history
+ unsetopt correct_all
