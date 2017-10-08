@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# MY CONFIG
+function my_config(){
+    ln -sf /usr/bin/vim.basic /etc/alternatives/editor
+
+    read -p "Enter git name: " input
+    git config --global user.name "$input"
+    read -p "Enter git mail: " input
+    git config --global user.email "$input"
+
+    git config --glocal push.default $input
+}
+
 #APT
 function my_apt(){
     user=$1
@@ -74,7 +86,7 @@ function install_xcape(){
     make install
 }
 
-### SCRIPT STARTS HERE
+### SCRIPT STARTS HERE ###
 
 exitstatus=true
 
@@ -86,39 +98,15 @@ fi
 user=$(who am i | awk '{print $1}')
 repos=~/repos
 
-ln -sf /usr/bin/vim.basic /etc/alternatives/editor
-
+my_config
 my_apt $user
 my_ppa
 my_git $user $repos
 
-read -p "Install Font-Awesome? [Y/n]: " input
-input=$(echo $input | awk '{print tolower($0)}')
-
-if [ "$input" == "y" || "$input" == "yes" ]; then
-   install_font_awesome $repos
-fi
-
-read -p "Install i3lock-blur? [Y/n]: " input
-input=$(echo $input | awk '{print tolower($0)}')
-
-if [ "$input" == "y" || "$input" == "yes" ]; then
-   install_i3lockblur $repos $user
-fi
-
-read -p "Install tmux? [Y/n]: " input
-input=$(echo $input | awk '{print tolower($0)}')
-
-if [ "$input" == "y" || "$input" == "yes" ]; then
-   install_tmux $repos $user
-fi
-
-read -p "Install xcape? [Y/n]: " input
-input=$(echo $input | awk '{print tolower($0)}')
-
-if [ "$input" == "y" || "$input" == "yes" ]; then
-   install_xcape $repos $user
-fi
+install_font_awesome $repos
+install_i3lockblur $repos $user
+install_tmux $repos $user
+install_xcape $repos $user
 
 script=$(readlink -f $0)
 sed -i '0,/exitstatus=false/s/exitstatus=false/exitstatus=true/' $script
