@@ -19,10 +19,18 @@ function my_config(){
 #APT
 function my_apt(){
     user=$1
-    apt update
-    apt install -y $(awk -F: '/ubuntu/ {print $2}' ~/README.md) debconf-utils
 
-    #SHELL
+    apt update
+    packages="$(awk -F: '/ubuntu/ {print $2}' ~/README.md) debconf-utils"
+
+    #Check if machine is virtual, compton doesnt work well in virtual machine
+    if grep -q hypervisor /proc/cpuinfo; then
+        packages=$(echo $packages | sed 's/compton //g')
+    fi
+
+    apt install -y $packages
+
+    #Setup zsh
     usermod -s $(which zsh) $user
     sudo -u $user touch ~/.zsh_aliases
 }
