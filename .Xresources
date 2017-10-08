@@ -1,7 +1,7 @@
 Xcursor.size: 12W
 URxvt.urgentOnBell: true
 URxvt.scrollBar: false
-URxvt.font: xft:Inconsolata:size=10
+URxvt.font: xft:Noto\ Mono:size=10
 URxvt.depth: 24
 URxvt.url-launcher: /usr/bin/firefox
 
