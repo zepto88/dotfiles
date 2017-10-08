@@ -1,39 +1,124 @@
 #!/bin/bash
 
 #APT
-apt update 
-apt install -y $(awk -F: '/ubuntu/ {print $2}' ~/README.md) debconf-utils
+function my_apt(){
+    user=$1
+    apt update 
+    apt install -y $(awk -F: '/ubuntu/ {print $2}' ~/README.md) debconf-utils
 
-#PYTHON
-pip3 install powerline-status
+    #SHELL
+    usermod -s $(which zsh) $user
+    sudo -u $user touch ~/.zsh_aliases
+}
 
 #PPA
-for ppa in $(awk -F' - ' '/ppa:/ {print $2}' ~/README.md)
-do
-    add-apt-repository -y $ppa
-done
+function my_ppa(){
+    for ppa in $(awk -F' - ' '/ppa:/ {print $2}' ~/README.md)
+    do
+        add-apt-repository -y $ppa
+    done
 
-apt update
-echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
-apt install -y ambiance-flat-colors numix-icon-theme oracle-java8-installer
+    apt update
+    echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
+
+    apt install -y ambiance-flat-colors numix-icon-theme oracle-java8-installer
+}
 
 #GIT
-user=$(who am i | awk '{print $1}')
-test -d ~/repos || sudo -u $user mkdir ~/repos
-cd ~/repos
+function my_git(){
+    user=$1
+    repos=$2
+    test -d $repos || sudo -u $1 mkdir $repos
+    cd $repos
 
-for repo in $(awk -F' - ' '/.*\.git/ && !/dotfiles/ {print $2}' ~/README.md)
-do
-    sudo -u $user git clone $repo
-done
-
-#SHELL
-usermod -s $(which zsh) $user
+    for repo in $(awk -F' - ' '/.*\.git/ && !/dotfiles/ {print $2}' ~/README.md)
+    do
+        sudo -u $user git clone $repo
+    done
+}
 
 #FANCY
-cd fonts
-./install.sh
-cd -
-cp Font-Awesome/fonts/*.ttf ~/.local/share/fonts/
+function install_font_awesome(){
+    repos=$1
+    cd ${repos}
+    cp Font-Awesome/fonts/*.ttf ~/.local/share/fonts/
+    fc-cache -fv
+}
 
+function install_i3lockblur(){
+    repos=$1
+    user=$2
+    cd ${repos}/i3lock-blur
+    apt install -y pkg-config libxcb1-dev libxcb1 libgl2ps-dev libx11-dev libglc0 libglc-dev libcairo2-dev libcairo-gobject2 libcairo2-dev libxkbfile-dev libxkbfile1 libxkbcommon-dev libxkbcommon-x11-dev libxcb-xkb-dev libxcb-dpms0-dev libxcb-damage0-dev libpam0g-dev libev-dev libxcb-image0-dev libxcb-util0-dev libxcb-composite0-dev libxcb-xinerama0-dev
+    sudo -u $user make
+    make install
+}
 
+function install_tmux(){
+    repos=$1
+    user=$2
+    cd ${repos}/tmux
+    apt install -y libevent-dev libncurses-dev
+    sudo -u $user sh autogen.sh
+    sudo -u $user ./configure
+    sudo -u $user make 
+    make install
+}
+
+function install_xcape(){
+    repos=$1
+    user=$2
+    cd ${repos}/xcape
+    apt install -y libxtst-dev
+    sudo -u $user make
+    make install
+}
+
+### SCRIPT STARTS HERE
+
+exitstatus=true
+
+if [ "$exitstatus" == true ];then
+    echo "Script has already been executed"
+    exit
+fi
+
+user=$(who am i | awk '{print $1}')
+repos=~/repos
+
+ln -sf /usr/bin/vim.basic /etc/alternatives/editor
+
+my_apt $user
+my_ppa
+my_git $user $repos
+
+read -p "Install Font-Awesome? [Y/n]: " input
+input=$(echo $input | awk '{print tolower($0)}')
+
+if [ "$input" == "y" || "$input" == "yes" ]; then
+   install_font_awesome $repos
+fi
+
+read -p "Install i3lock-blur? [Y/n]: " input
+input=$(echo $input | awk '{print tolower($0)}')
+
+if [ "$input" == "y" || "$input" == "yes" ]; then
+   install_i3lockblur $repos $user
+fi
+
+read -p "Install tmux? [Y/n]: " input
+input=$(echo $input | awk '{print tolower($0)}')
+
+if [ "$input" == "y" || "$input" == "yes" ]; then
+   install_tmux $repos $user
+fi
+
+read -p "Install xcape? [Y/n]: " input
+input=$(echo $input | awk '{print tolower($0)}')
+
+if [ "$input" == "y" || "$input" == "yes" ]; then
+   install_xcape $repos $user
+fi
+
+script=$(readlink -f $0)
+sed -i '0,/exitstatus=false/s/exitstatus=false/exitstatus=true/' $script
