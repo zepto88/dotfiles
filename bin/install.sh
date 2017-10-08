@@ -9,7 +9,7 @@ function my_config(){
     read -p "Enter git mail: " input
     git config --global user.email "$input"
 
-    git config --glocal push.default simple
+    git config --global push.default simple
 }
 
 #APT
@@ -88,7 +88,7 @@ function install_xcape(){
 
 ### SCRIPT STARTS HERE ###
 
-exitstatus=true
+exitstatus=false
 
 if [ "$exitstatus" == true ];then
     echo "Script has already been executed"
