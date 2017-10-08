@@ -2,20 +2,24 @@
 
 # MY CONFIG
 function my_config(){
+    user=$1
     ln -sf /usr/bin/vim.basic /etc/alternatives/editor
 
-    read -p "Enter git name: " input
-    git config --global user.name "$input"
-    read -p "Enter git mail: " input
-    git config --global user.email "$input"
+    read -p "Enter terminal you want to use: " input
+    sudo -u $user echo "export TERMINAL=$input" >> ~/.profile
 
-    git config --global push.default simple
+    read -p "Enter git name: " input
+    sudo -u $user git config --global user.name "$input"
+    read -p "Enter git mail: " input
+    sudo -u $user git config --global user.email "$input"
+
+    sudo -u $user git config --global push.default simple
 }
 
 #APT
 function my_apt(){
     user=$1
-    apt update 
+    apt update
     apt install -y $(awk -F: '/ubuntu/ {print $2}' ~/README.md) debconf-utils
 
     #SHELL
@@ -92,7 +96,7 @@ function install_xcape(){
 user=${SUDO_USER}
 repos=~/repos
 
-my_config
+my_config $user
 my_apt $user
 my_ppa
 my_git $user $repos
