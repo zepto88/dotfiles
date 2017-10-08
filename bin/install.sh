@@ -9,7 +9,7 @@ function my_config(){
     read -p "Enter git mail: " input
     git config --global user.email "$input"
 
-    git config --glocal push.default $input
+    git config --glocal push.default simple
 }
 
 #APT
