@@ -53,6 +53,7 @@ function my_git(){
 function install_font_awesome(){
     repos=$1
     cd ${repos}
+    mkdir -p ~/.local/share/fonts
     cp Font-Awesome/fonts/*.ttf ~/.local/share/fonts/
     fc-cache -fv
 }
@@ -88,14 +89,7 @@ function install_xcape(){
 
 ### SCRIPT STARTS HERE ###
 
-exitstatus=false
-
-if [ "$exitstatus" == true ];then
-    echo "Script has already been executed"
-    exit
-fi
-
-user=$(who am i | awk '{print $1}')
+user=${SUDO_USER}
 repos=~/repos
 
 my_config
@@ -107,6 +101,3 @@ install_font_awesome $repos
 install_i3lockblur $repos $user
 install_tmux $repos $user
 install_xcape $repos $user
-
-script=$(readlink -f $0)
-sed -i '0,/exitstatus=false/s/exitstatus=false/exitstatus=true/' $script
