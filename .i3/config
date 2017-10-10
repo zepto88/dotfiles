@@ -223,3 +223,5 @@ exec_always keyboard-settings.sh
 exec_always xset r rate 225 50
 exec_always ~/.screenlayout/primary.sh
 exec_always feh --bg-scale ~/Pictures/wallpaper
+
+exec --no-startup-id ~/.autostart
