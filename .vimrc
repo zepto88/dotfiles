@@ -58,8 +58,19 @@ let NERDTreeQuitOnOpen=1
 " airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tabs = 0
-let g:airline_powerline_fonts=1
+let g:airline_symbols_ascii = 1
 let g:airline_theme='badwolf'
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.linenr = '☰'
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.whitespace = 'Ξ'
+
+
 set laststatus=2
 set ttimeoutlen=0
 set noshowmode
