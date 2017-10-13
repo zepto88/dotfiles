@@ -198,10 +198,6 @@ bar {
         strip_workspace_numbers yes
 }
 
-exec --no-startup-id nm-applet
-exec --no-startup-id compton -b --backend glx --vsync opengl-swc
-exec --no-startup-id volumeicon
-
 new_window 1pixel
 new_window pixel 2
 
@@ -219,9 +215,12 @@ bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10%
 bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 5%
 
 exec_always ~/.i3/i3autolock.sh
-exec_always keyboard-settings.sh
+exec_always ~/bin/keyboard-settings.sh
 exec_always xset r rate 225 50
 exec_always ~/.screenlayout/primary.sh
 exec_always feh --bg-scale ~/Pictures/wallpaper
 
+exec --no-startup-id nm-applet
+exec --no-startup-id compton -b --backend glx --vsync opengl-swc
+exec --no-startup-id volumeicon
 exec --no-startup-id ~/.autostart
