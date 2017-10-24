@@ -10,23 +10,9 @@ URxvt*background:                     #101010
 URxvt*foreground:                     #d6d6d6
 URxvt*cursorColor:                    #d6d6d6
 
-! URxvt*colorBD:                        color
-! URxvt*colorIT:                        color
-! URxvt*colorUL:                        color
-! URxvt*colorRV:                        color
-! URxvt*underlineColor:                 color
 URxvt*scrollColor:                    #d6d6d6
-! URxvt*troughColor:                    color
 URxvt*highlightColor:                 #FFFFFF
 URxvt*highlightTextColor:             #000000
-! URxvt*cursorColor2:                   color
-! URxvt*pointerColor:                   color
-! URxvt*pointerColor2:                  color
-! URxvt*borderColor:                    color
-! URxvt*tab-bg:                         colour
-! URxvt*tab-fg:                         colour
-! URxvt*tabbar-bg:                      colour
-! URxvt*tabbar-fg:                      colour
 
 URxvt*color0:                         #151718
 URxvt*color1:                         #Cd3f45
@@ -44,8 +30,6 @@ URxvt*color12:                        #55b5db
 URxvt*color13:                        #a074c4
 URxvt*color14:                        #55dbbe
 URxvt*color15:                        #ffffff
-
-! 256 color space
 URxvt*color16:                        #db7b55
 URxvt*color17:                        #8a553f
 URxvt*color18:                        #8ec43d
