@@ -89,6 +89,10 @@ nnoremap gE :lprev<cr>
 
 " CtrlP
 let g:ctrlp_map = '<leader>p'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_extensions = ['tag']
+nnoremap <leader>o :CtrlPTag<CR>
+
 
 " mappings
 noremap <F8> :set number!<CR>:set relativenumber!<CR>
