@@ -1,2 +1,2 @@
 #!/bin/sh
-sudo apt update && yes | sudo apt upgrade
+sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y && sudo apt clean && sudo updatedb && sudo ldconfig
