@@ -1,5 +1,5 @@
 #!/bin/bash
-
+export DISPLAY=:0
 setxkbmap -layout us -option ctrl:nocaps
 
 which xcape &>/dev/null
