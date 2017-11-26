@@ -12,6 +12,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'chiel92/vim-autoformat'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()
 
@@ -29,6 +30,7 @@ set wildmenu
 set hlsearch
 set t_Co=256
 set nocompatible
+set hidden
 syntax on
 filetype plugin on
 
@@ -41,6 +43,7 @@ hi ExtraWhitespace ctermbg=lightblue guibg=lightblue ctermfg=black
 2match ExtraWhitespace /\s\+$/
 hi Visual cterm=NONE ctermfg=black ctermbg=172
 hi Search cterm=NONE ctermfg=black ctermbg=green
+hi MatchParen ctermbg=blue guibg=lightblue
 
 " vimdiff colors
 hi DiffAdd cterm=none ctermfg=NONE ctermbg=23
@@ -91,6 +94,7 @@ nnoremap gE :lprev<cr>
 let g:ctrlp_map = '<leader>p'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_extensions = ['tag']
+let g:ctrlp_prompt_mappings = { 'AcceptSelection("t")': ['<cr>'] }
 nnoremap <leader>o :CtrlPTag<CR>
 
 
@@ -116,3 +120,10 @@ noremap <leader>F :Autoformat<CR>
 
 " commands
 command! MakeTags !ctags -R .
+
+" Yocto files as conf for simple syntax
+augroup filetypedetect
+    au BufRead,BufNewFile *.bb set filetype=sh
+    au BufRead,BufNewFile *.bbappend set filetype=sh
+    au BufRead,BufNewFile *.bbclass set filetype=sh
+ augroup END
