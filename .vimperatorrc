@@ -32,3 +32,4 @@ source! /home/zepto/.vimperatorrc.local
 
 " vim: set ft=vimperator:
 set gui=nonavigation
+set hintkeys=hjklasdfgyuiopqwertnmzxcvb
