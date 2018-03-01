@@ -66,7 +66,7 @@ function install_font_awesome(){
     repos=$1
     cd ${repos}
     mkdir -p ~/.local/share/fonts
-    cp Font-Awesome/fonts/*.ttf ~/.local/share/fonts/
+    cp Font-Awesome/use-on-desktop/*.* ~/.local/share/fonts/
     fc-cache -fv
 }
 
