@@ -12,12 +12,10 @@ Plugin 'tpope/vim-commentary'
 Plugin 'chiel92/vim-autoformat'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()
 
 " Settings
-set ignorecase
 set ruler
 set shiftwidth=4
 set expandtab
@@ -31,6 +29,7 @@ set hlsearch
 set t_Co=256
 set nocompatible
 set hidden
+set paste
 syntax on
 filetype plugin on
 
@@ -77,6 +76,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 set laststatus=2
 set ttimeoutlen=0
 set noshowmode
+command Json :%!jq '.'
 
 " syntastic
 let g:syntastic_always_populate_loc_list = 1
