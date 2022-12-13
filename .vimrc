@@ -17,9 +17,9 @@ call vundle#end()
 
 " Settings
 set ruler
-set shiftwidth=4
 set expandtab
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set scrolloff=5
 set go-=T
 set autoindent
@@ -29,7 +29,7 @@ set hlsearch
 set t_Co=256
 set nocompatible
 set hidden
-set paste
+" set paste
 syntax on
 filetype plugin on
 
