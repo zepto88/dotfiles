@@ -16,6 +16,8 @@ source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
 
 zstyle ':completion:*' menu select
 
+bindkey -e
+
 bindkey "^[[Z" reverse-menu-complete
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
