@@ -20,8 +20,8 @@ compinit
 # Optional: cache completions for faster startup
 zstyle ':completion::complete:*' use-cache on
 zstyle ':completion::complete:*' cache-path ~/.zcompcache
-
 zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 bindkey -e
 
@@ -31,6 +31,8 @@ bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
 bindkey '^[[A' up-line-or-history
 bindkey '^[[B' down-line-or-history
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
 
 export EDITOR="vim"
 
