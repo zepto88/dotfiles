@@ -14,6 +14,13 @@ source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+autoload -Uz compinit
+compinit
+
+# Optional: cache completions for faster startup
+zstyle ':completion::complete:*' use-cache on
+zstyle ':completion::complete:*' cache-path ~/.zcompcache
+
 zstyle ':completion:*' menu select
 
 bindkey -e
