@@ -29,6 +29,8 @@ bindkey "^[[Z" reverse-menu-complete
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
+bindkey '^[[A' up-line-or-history
+bindkey '^[[B' down-line-or-history
 
 export EDITOR="vim"
 
