@@ -1,5 +1,5 @@
 " Vundle
-set rtp+=~/.vim/bundle/vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'scrooloose/nerdtree'
