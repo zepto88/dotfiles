@@ -1,0 +1,10 @@
+\.git.*
+
+\.Xresources
+\.i3
+\.pentadactylrc
+\.stow-local-ignore
+\.vimperatorrc
+
+bin
+README.md
