@@ -2,7 +2,7 @@ export PATH=$HOME/bin:$PATH
 
 alias ls='ls --color=auto'
 alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
-alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
+alias l='ls -lv'   # show long listing but no hidden dotfiles except "."
 
 # Aliases
 if [ -f ~/.zsh_aliases ];then
