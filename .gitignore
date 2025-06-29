@@ -22,3 +22,6 @@
 !.Xresources
 !.pentadactylrc
 !.xmodmap
+!.config
+!.config/*
+!.p10k.zsh
